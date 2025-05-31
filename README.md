@@ -40,7 +40,7 @@ O módulo **Supervisor** (Arduino Nano 1) é responsável por:
 ### Componentes Conectados ao Supervisor
 
 1. **Botão de Emergência (INT0 – pino PD2 / D2)**  
-   - Conectado a um botão tipo “push‑button” cujo outro terminal está ligado a GND junto com um capacitor e uma resistencia de X F e Y Ω para fazer um debouncing.  
+   - Conectado a um botão tipo “push‑button” cujo outro terminal está ligado a GND junto com um capacitor e uma resistencia para fazer um debouncing.  
    - O Arduino ativa o *pull‑up* interno nesse pino e configura uma interrupção externa para disparar sempre que o botão é pressionado (nível lógico baixo).  
    - Ao receber o pulso de interrupção, o Supervisor alterna uma variável de controle (`State`), que indica se a planta está em operação ou em parada.  
 
@@ -50,7 +50,7 @@ O módulo **Supervisor** (Arduino Nano 1) é responsável por:
    - Na prática, um potenciômetro define a velocidade da serra horizontal e o outro define a velocidade da serra vertical.  
 
 3. **LED Indicador “Planta em Operação” (pino PD7 / D7)**  
-   - Conectado a um LED em série com resistor (≈ 470 Ω).  
+   - Conectado a um LED em série com resistor.  
    - Permanece aceso enquanto a variável `State` estiver em “planta em operação” (valor lógico 1).  
 
 4. **LED Indicador “Parada Solicitada” (pino PD6 / D6)**  
